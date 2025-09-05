@@ -1,175 +1,86 @@
-# 🧸 Brinquedos Revisão Java 2025 - API para Gestão de Brinquedos Esportivos Infantis
+# Projeto Java - Checkpoint 4 (Parte 2)
 
-Projeto desenvolvido para o **Checkpoint 4 de Java Advamced**, que consiste em uma **API RESTful** para gerenciamento de brinquedos esportivos destinados a crianças de até 12 anos, contemplando **CRUD completo**, persistência no banco Oracle FIAP, validação e HATEOAS.
-
----
-
-## 👨‍💻 Integrantes - Grupo LTAKN
-
-- **Enzo Prado Soddano** – RM: 557937  
-  [GitHub](https://github.com/DerBrasilianer)
-
-- **Lucas Resende Lima** – RM: 556564  
-  [GitHub](https://github.com/lucasresendelima)
-
-- **Vinicius Prates Altafini** – RM: 559183  
-  [GitHub](https://github.com/vinicius945)
+**Disciplina:** TDS - FIAP  
+**Grupo:** LTAKN  
+- Enzo Prado Soddano — RM557937  
+- Lucas Resende Lima — RM556564  
+- Vinicius Prates Altafini — RM556183  
 
 ---
 
-## 📡 Sobre o Projeto
+## 📌 Descrição
+Este projeto é a **Parte 2** do Checkpoint 4 da disciplina de TDS.  
+Na **Parte 1** implementamos uma API REST com Spring Boot e HATEOAS.  
+Agora, na **Parte 2**, evoluímos a aplicação para incluir:
 
-Esta solução foi desenvolvida com foco em boas práticas de arquitetura e tecnologias modernas, permitindo:
-
-- Cadastro e gerenciamento de **brinquedos esportivos infantis**
-- Persistência de dados em **Oracle Database** via **Spring Data JPA**
-- Validação de campos utilizando **Jakarta Validation**
-- Retorno de dados seguindo o padrão **HATEOAS** (nível de maturidade 3)
-- Testes de API via **Insomnia** ou **Postman**
-- Deploy em nuvem via Render ([Link do Deploy](https://brinquedos-revisao-java-cp4-2025.onrender.com))
-
----
-
-## 🛠️ Tecnologias Utilizadas
-
-- Desenvolvido via IntelliJ
-- Java 17 + Spring Boot 3.x
-- Spring Data JPA (com Oracle DB)
-- Lombok para redução de boilerplate
-- HATEOAS para links RESTful
-- Maven para gerenciamento de dependências
-- Deploy em nuvem (Render)
-
-<img width="1020" height="621" alt="image" src="https://github.com/user-attachments/assets/77f39a31-7e16-4159-b713-29c62bbdc8ff" />
+- Interface web usando **Spring MVC + Thymeleaf**  
+- Estilização com Bootstrap + CSS customizado (tema azul/branco)  
+- CRUD completo de brinquedos pela interface web  
+- Footer institucional com dados do grupo  
+- Deploy no Render com Dockerfile  
 
 ---
 
-## 🗂️ Entidade
+## 🚀 Deploy / Entrega
 
-- **Brinquedo:** Representa um brinquedo esportivo infantil
-    - Campos: `id`, `nome`, `tipo`, `classificacao`, `tamanho`, `preco`
+- 🌐 **Projeto Live:**  
+  [https://brinquedos-revisao-java-cp4-2025-parte2.onrender.com](https://brinquedos-revisao-java-cp4-2025-parte2.onrender.com)
 
----
+- ⚙️ **Dashboard do Render:**  
+  [https://dashboard.render.com/web/srv-d2tjq2vfte5s73aancg0/deploys/dep-d2tjrtre5dus73dttib0](https://dashboard.render.com/web/srv-d2tjq2vfte5s73aancg0/deploys/dep-d2tjrtre5dus73dttib0)
 
-## ⚙️ Endpoints Principais (REST API)
-
-| Método | Endpoint                 | Descrição                     |
-|--------|--------------------------|-------------------------------|
-| GET    | `/brinquedos`            | Listar todos os brinquedos    |
-| GET    | `/brinquedos/{id}`       | Obter brinquedo por ID        |
-| POST   | `/brinquedos`            | Criar novo brinquedo          |
-| PUT    | `/brinquedos/{id}`       | Atualizar brinquedo completo  |
-| PATCH  | `/brinquedos/{id}`       | Atualizar brinquedo parcial   |
-| DELETE | `/brinquedos/{id}`       | Excluir brinquedo por ID      |
+- 📦 **Repositório GitHub (Parte 2):**  
+  [https://github.com/SEU-USUARIO/java-cp4-2025-parte2](https://github.com/SEU-USUARIO/java-cp4-2025-parte2)
 
 ---
 
-## 🧪 Exemplos de Uso (com cURL)
+## 🛠️ Tecnologias
 
-### 🔹 Criar um Brinquedo
-
-curl -X POST https://brinquedos-revisao-java-cp4-2025.onrender.com/brinquedos \
--H "Content-Type: application/json" \
--d '{
-"nome": "Bola de Futebol Infantil",
-"tipo": "Bola",
-"classificacao": "Esportivo",
-"tamanho": "P",
-"preco": 49.90
-}'
-
-<img width="1365" height="680" alt="image" src="https://github.com/user-attachments/assets/ea9f942f-c5aa-4bc6-9cf2-b472ebf6c7af" />
-
-### 🔹 Atualizar um Brinquedo (PUT)
-
-curl -X PUT https://brinquedos-revisao-java-cp4-2025.onrender.com/brinquedos/[ID] \
--H "Content-Type: application/json" \
--d '{
-"nome": "Bola de Futebol Profissional",
-"tipo": "Bola",
-"classificacao": "Esportivo",
-"tamanho": "M",
-"preco": 79.90
-}'
-
-<img width="1365" height="680" alt="image" src="https://github.com/user-attachments/assets/c9448e7b-20db-45e0-9d2a-58dc0abc0400" />
-
-### 🔹 Atualizar parcialmente um Brinquedo (PATCH)
-
-curl -X PATCH https://brinquedos-revisao-java-cp4-2025.onrender.com/brinquedos/[ID] \
--H "Content-Type: application/json" \
--d '{
-"preco": 59.90
-}'
-
-<img width="1365" height="679" alt="image" src="https://github.com/user-attachments/assets/08f96405-3943-4706-a85a-08d272d64ea8" />
-
-### 🔹 Listar Todos os Brinquedos
-
-curl https://brinquedos-revisao-java-cp4-2025.onrender.com/brinquedos
-
-<img width="1365" height="679" alt="image" src="https://github.com/user-attachments/assets/f5076ac2-71af-4c62-a9b1-802b7ead91eb" />
-
-### 🔹 Listar Brinquedo por Id
-
-curl https://brinquedos-revisao-java-cp4-2025.onrender.com/brinquedos/[ID]
-
-<img width="1365" height="681" alt="image" src="https://github.com/user-attachments/assets/c6befc16-e1ef-4308-91b6-e21d13ff0591" />
-
-### 🔹 Excluir um Brinquedo
-
-curl -X DELETE https://brinquedos-revisao-java-cp4-2025.onrender.com/brinquedos/[ID]
-
-<img width="1365" height="678" alt="image" src="https://github.com/user-attachments/assets/952aaf2f-70d9-47aa-af12-f836db504e9e" />
+- **Java 17**
+- **Spring Boot**
+- **Spring MVC + Thymeleaf**
+- **Spring Data JPA**
+- **HATEOAS** (parte 1)
+- **Maven**
+- **Render**
 
 ---
 
-## 🧸 Exemplos de Brinquedos para Teste
+## ⚙️ Como rodar localmente
 
-{
-"nome": "Bola de Futebol Infantil",
-"tipo": "Bola",
-"classificacao": "Esportivo",
-"tamanho": "P",
-"preco": 49.90
-},
+1. Clone o repositório:
+   ```bash
+   git clone https://github.com/SEU-USUARIO/java-cp4-2025-parte2.git
+   cd java-cp4-2025-parte2
+   ```
 
-{
-"nome": "Tênis Infantil de Corrida",
-"tipo": "Tênis",
-"classificacao": "Esportivo",
-"tamanho": "28",
-"preco": 120.00
-},
+2. Abra o projeto na sua IDE (IntelliJ, Eclipse ou VS Code com suporte a Java).  
 
-{
-"nome": "Raquete de Tênis Infantil",
-"tipo": "Raquete",
-"classificacao": "Esportivo",
-"tamanho": "Único",
-"preco": 85.50
-},
+3. Rode a aplicação a partir da classe principal do Spring Boot (`@SpringBootApplication`).  
 
-{
-"nome": "Meias Esportivas Coloridas",
-"tipo": "Meias",
-"classificacao": "Esportivo",
-"tamanho": "M",
-"preco": 25.00
-},
-
-{
-"nome": "Camiseta Esportiva Infantil",
-"tipo": "Roupa",
-"classificacao": "Esportivo",
-"tamanho": "P",
-"preco": 39.90
-}
+4. A aplicação ficará disponível em:  
+   [http://localhost:8080](http://localhost:8080)
 
 ---
 
-## 🚀 Deploy
+## 👀 Funcionalidades
 
-O projeto foi deployado utilizando o Render.
+- Página inicial com links para:
+  - Catálogo de brinquedos (interface web)
+  - API JSON REST (Parte 1)
+- CRUD completo (criar, listar, editar, excluir)
+- Templates estilizados com Bootstrap e CSS custom
+- Footer institucional com nomes e RMs do grupo
+- Deploy no Render usando Dockerfile
 
-🔗 Link de acesso: [https://brinquedos-revisao-java-cp4-2025.onrender.com](https://brinquedos-revisao-java-cp4-2025.onrender.com)
+---
+
+## 📸 Prints de tela
+
+*(Adicionar aqui prints da interface e do CRUD funcionando — exigência da entrega).*
+
+---
+
+## 📽️ Vídeo de demonstração
+
+*(Adicionar link para o vídeo de até 5 minutos mostrando as funcionalidades).*
