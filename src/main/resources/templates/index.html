@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="pt-BR">
+<head th:replace="fragments/layout :: mainHead('Projeto Brinquedos - Home')"></head>
+
+<body>
+<div th:replace="fragments/layout :: mainHeader"></div>
+
+<main class="container py-5">
+
+  <section class="hero card-surface">
+    <div class="row align-items-center">
+      <div class="col-md-7">
+        <h1>Projeto Brinquedos</h1>
+        <p class="text-muted">API REST + interface web com Thymeleaf. Use a interface para gerenciar o catálogo ou acesse os endpoints JSON.</p>
+        <p>
+          <a class="btn btn-brand me-2" th:href="@{/brinquedos/web}">Acessar Catálogo</a>
+          <a class="btn btn-outline-primary" th:href="@{/brinquedos}">API JSON</a>
+        </p>
+      </div>
+      <div class="col-md-5 text-center">
+        <img src="/images/logo.svg" alt="logo" style="max-width:200px" onerror="this.style.display='none'"/>
+      </div>
+    </div>
+  </section>
+
+  <div class="row mt-4">
+    <div class="col-md-6">
+      <div class="card-surface">
+        <h5>Como usar</h5>
+        <p class="text-muted small">Clique em "Acessar Catálogo" para ver, criar e editar brinquedos. Para integrar, consulte os endpoints JSON.</p>
+      </div>
+    </div>
+
+    <div class="col-md-6">
+      <div class="card-surface">
+        <h5>Deploy / Entrega</h5>
+        <p class="text-muted small">Atualize o README com instruções de build e link do deploy (separado para Parte II).</p>
+      </div>
+    </div>
+  </div>
+
+</main>
+
+<div th:replace="fragments/layout :: mainFooter"></div>
+</body>
+
+</html>

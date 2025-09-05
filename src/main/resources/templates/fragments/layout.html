@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="pt-BR">
+
+<head th:fragment="mainHead(pageTitle)">
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title th:text="${pageTitle}">Brinquedos</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <link rel="stylesheet" th:href="@{/css/style.css}"/>
+</head>
+
+<body>
+
+<header th:fragment="mainHeader">
+
+    <nav class="site-header navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" th:href="@{/}">
+                <img src="/images/logo.svg" alt="logo" class="logo" onerror="this.style.display='none'"/>
+                <span class="brand-text">Brinquedos</span>
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="mainNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" th:href="@{/brinquedos/web}">Catálogo</a></li>
+                    <li class="nav-item"><a class="nav-link" th:href="@{/brinquedos}">API JSON</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+</header>
+
+<div th:fragment="mainFooter">
+
+    <footer class="site-footer py-5 border-top">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 mb-3">
+                    <h6 class="fw-bold text-primary">Grupo LTAKN</h6>
+                    <ul class="list-unstyled small">
+                        <li>Enzo Prado Soddano — RM557937</li>
+                        <li>Lucas Resende Lima — RM556564</li>
+                        <li>Vinicius Prates Altafini — RM559183</li>
+                    </ul>
+                </div>
+
+                <div class="col-md-6 mb-3">
+                    <h6 class="fw-bold text-primary">Links úteis</h6>
+                    <ul class="list-unstyled small">
+                        <li><a href="#" class="nav-link p-0">Sobre nós</a></li>
+                        <li><a href="#" class="nav-link p-0">Localizações físicas</a></li>
+                        <li><a href="#" class="nav-link p-0">Política de entrega</a></li>
+                        <li><a href="#" class="nav-link p-0">Termos de uso</a></li>
+                        <li><a href="#" class="nav-link p-0">Devolução de produtos</a></li>
+                        <li><a href="#" class="nav-link p-0">Contato</a></li>
+
+                    </ul>
+                </div>
+            </div>
+
+            <div class="text-center small text-muted mt-3">
+                &copy; <span th:text="${#dates.format(#dates.createNow(), 'yyyy')}">2025</span> — Projeto Brinquedos
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</div>
+
+</body>
+
+</html>
