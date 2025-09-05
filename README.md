@@ -1,6 +1,5 @@
-# Projeto Java - Checkpoint 4 (Parte 2)
+# Brinquedos - Checkpoint 4 (Parte 2)
 
-**Disciplina:** TDS - FIAP  
 **Grupo:** LTAKN  
 - Enzo Prado Soddano — RM557937  
 - Lucas Resende Lima — RM556564  
@@ -9,7 +8,7 @@
 ---
 
 ## 📌 Descrição
-Este projeto é a **Parte 2** do Checkpoint 4 da disciplina de TDS.  
+Este projeto é a **Parte 2** do Checkpoint 4 de Java Advanced.  
 Na **Parte 1** implementamos uma API REST com Spring Boot e HATEOAS.  
 Agora, na **Parte 2**, evoluímos a aplicação para incluir:
 
@@ -50,7 +49,7 @@ Agora, na **Parte 2**, evoluímos a aplicação para incluir:
 
 1. Clone o repositório:
    ```bash
-   git clone https://github.com/SEU-USUARIO/java-cp4-2025-parte2.git
+   git clone https://github.com/DerBrasilianer/java-cp4-2025-parte2.git
    cd java-cp4-2025-parte2
    ```
 
@@ -59,7 +58,7 @@ Agora, na **Parte 2**, evoluímos a aplicação para incluir:
 3. Rode a aplicação a partir da classe principal do Spring Boot (`@SpringBootApplication`).  
 
 4. A aplicação ficará disponível em:  
-   [http://localhost:8080](http://localhost:8080)
+   [http://localhost:8081](http://localhost:8080)
 
 ---
 
@@ -69,15 +68,26 @@ Agora, na **Parte 2**, evoluímos a aplicação para incluir:
   - Catálogo de brinquedos (interface web)
   - API JSON REST (Parte 1)
 - CRUD completo (criar, listar, editar, excluir)
-- Templates estilizados com Bootstrap e CSS custom
-- Footer institucional com nomes e RMs do grupo
+- Templates estilizados com Bootstrap e CSS
 - Deploy no Render usando Dockerfile
 
 ---
 
 ## 📸 Prints de tela
 
-*(Adicionar aqui prints da interface e do CRUD funcionando — exigência da entrega).*
+* Adicionar Brinquedo (CREATE)
+![img.png](src/main/resources/static/prints/a_print_create.png)
+
+* Listar Brinquedos (READ)
+![img_1.png](src/main/resources/static/prints/b_print_read.png)
+
+* Editar Brinquedo (UPDATE)
+![img_2.png](src/main/resources/static/prints/c_print_update_1.png)
+![img_3.png](src/main/resources/static/prints/c_print_update_2.png)
+
+* Excluir Brinquedo (DELETE)
+![img_4.png](src/main/resources/static/prints/d_print_delete_1.png)
+![img_5.png](src/main/resources/static/prints/d_print_delete_2.png)
 
 ---
 
