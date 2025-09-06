@@ -93,4 +93,4 @@ Agora, na **Parte 2**, evoluímos a aplicação para incluir:
 
 ## 📽️ Vídeo de demonstração
 
-*(Adicionar link para o vídeo de até 5 minutos mostrando as funcionalidades).*
+## [Link do vídeo](https://youtu.be/w0toA0mEE9o)
